@@ -20,3 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// tmp
+Route::group(['middleware' => 'role:web-developer'], function() {
+    Route::get('/dashboard', function() {
+        return 'Добро пожаловать, Веб-разработчик';
+    });
+});
