@@ -175,6 +175,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        //maz
+        App\Providers\RolesServiceProvider::class,
+        App\Providers\PermissionServiceProvider::class,
+
     ],
 
     /*
